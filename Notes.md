@@ -16,10 +16,12 @@
     weeks_since: weeks_idx - last_played, if 0 means the player played this week
     pct_f: all points won across serve and return over the past 8 weeks, NaN if < 150 points were played in this window
     pct_b: same measure over 52 weeks (same 150 point min)
-    form_delta: pct_f - pct_b, positive means player is winning more points than their yearly norm (careful of just playing more tennis) 
+    form_delta: pct_f - pct_b, positive means player is winning more points than their yearly norm (careful of just playing more tennis) (ratio is better for linear regression bc of collinearity)
+
 
 # Creating the injury probabilities
     1) Seperate into 3 different age groups (based on dataset range)
     2) Proxy for a long-term injury is more than 3 weeks from playing a tournament (does not include extended New Year holiday stretch)
     3) 2020 excluded (COVID)
     4) Used a wilson interval to show confidence (take into account the observation limits)
+    5) Just because the inj rate is low, there might be a variable which predicts it well 
