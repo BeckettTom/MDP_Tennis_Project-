@@ -1,0 +1,23 @@
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.env
+
+# Data (large, and re-downloadable from the sources in your notes)
+data/
+*.csv
+
+# OS files
+.DS_Store
